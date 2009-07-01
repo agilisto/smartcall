@@ -12,10 +12,20 @@ Gem to provide sms functionality through the Smartcall Technology Solutions web 
 * Only South African delivery
 
 == SYNOPSIS:
+From code:
+
 require 'smartcall'
 
 api = Smartcall::API.new(<USERNAME>, <PASSWORD>, <CAMPAIGN_ID>, <REFERENCE>)
 api.send_message("0825559629", "Hello World")
+
+You can also specify the parameters in a ~/.smartcall file:
+
+# ~/.smartcall
+username: <username>
+password: <password>
+campaign_id: <campaign_id>
+reference: <reference>
 
 == REQUIREMENTS:
 
@@ -23,28 +33,3 @@ api.send_message("0825559629", "Hello World")
 == INSTALL:
 
 sudo gem install agilisto-smartcall
-
-== LICENSE:
-
-(The MIT License)
-
-Copyright (c) 2009 Armand du Plessis
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
