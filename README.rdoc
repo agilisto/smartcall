@@ -1,32 +1,34 @@
-= smartcall
+= smartcall sms gem
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/agilisto/smartcall
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Gem to provide sms functionality through the Smartcall Technology Solutions web services.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* MSISDN in international format not accepted.
+* Only South African delivery
 
 == SYNOPSIS:
+require 'smartcall'
 
-  FIX (code sample of usage)
+api = Smartcall::API.new(<USERNAME>, <PASSWORD>, <CAMPAIGN_ID>, <REFERENCE>)
+api.send_message("0825559629", "Hello World")
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+sudo gem install smartcall
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2009 FIXME full name
+Copyright (c) 2009 Armand du Plessis
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
