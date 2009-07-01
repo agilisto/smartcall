@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+local_libs = [
+ File.join(File.dirname(__FILE__), *%w[../lib/smartcall]),
+ File.join(File.dirname(__FILE__), *%w[../lib/smartcall/utility]) 
+]
+
+if File.exist?(local_libs.first)
+  local_libs.each { |lib| require lib }
+else
+  require 'rubygems'
+  require 'smartcall'
+  require 'smartcall/utility'
+end
+
+# parse command line options
+options = Smartcall::Utility::Options.parse(ARGV)
+
+# authenticate and load the API
+api = Smartcall::API.new(options.username, options.password, options.campaign_id, options.reference)
+
+begin
+    puts "Sending '#{options.message}' to #{options.recipient}..."
+    additional_opts = {}
+    additional_opts[:from] = options.from if options.from
+    msg_id = api.send_message(options.recipient, options.message, additional_opts)
+    puts "Message sent successfully (Result: #{msg_id})." unless msg_id == false
+    puts "Message sending failed. Switch to debug for more info" if msg_id == false
+    exit 0  
+rescue Smartcall::Soap::SmartcallError => e
+    puts "Unexpected error occurred. #{e.message}"
+    exit 1
+  
+rescue Timeout::Error
+  puts "The connection the the Smartcall service timed out"
+  puts "Please check your network settings and try again."
+  exit 1
+end
