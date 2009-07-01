@@ -22,7 +22,7 @@ api.send_message("0825559629", "Hello World")
 
 == INSTALL:
 
-sudo gem install smartcall
+sudo gem install agilisto-smartcall
 
 == LICENSE:
 

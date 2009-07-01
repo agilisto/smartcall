@@ -1,5 +1,3 @@
-
-For more information on the smartcall gem , see http://smartcall.rubyforge.org
 For more information on Smartcall Technology Solutions, see http://www.smartcalltech.co.za
 
 
