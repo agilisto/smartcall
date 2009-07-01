@@ -4,12 +4,9 @@
 
 == DESCRIPTION:
 
-Gem to provide sms functionality through the Smartcall Technology Solutions web services.
+Gem to provide sms functionality through the Smartcall Technology Solutions web services. Contact http://www.smartcalltech.co.za for an account.
 
 == FEATURES/PROBLEMS:
-
-* MSISDN in international format not accepted.
-* Only South African delivery
 
 == SYNOPSIS:
 From code:
