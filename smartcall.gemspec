@@ -5,11 +5,11 @@ Gem::Specification.new do |s|
   s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["FIXME full name"]
+  s.authors = ["Armand du Plessis"]
   s.date = %q{2009-07-01}
   s.default_executable = %q{smartcall}
   s.description = %q{Gem to provide sms functionality through the Smartcall Technology Solutions web services.}
-  s.email = ["FIXME email"]
+  s.email = ["adp@bank.io"]
   s.executables = ["smartcall"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt", "website/index.txt"]
   s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "bin/smartcall", "config/website.yml.sample", "lib/smartcall.rb", "lib/smartcall/soap/default.rb", "lib/smartcall/soap/default_driver.rb", "lib/smartcall/soap/smartcall_error.rb", "lib/smartcall/soap/sms_ws_client.rb", "lib/smartcall/utility.rb", "lib/smartcall/utility/options.rb", "script/console", "script/destroy", "script/generate", "script/txt2html", "test/test_helper.rb", "test/test_smartcall.rb", "website/index.html", "website/index.txt", "website/javascripts/rounded_corners_lite.inc.js", "website/stylesheets/screen.css", "website/template.html.erb"]
