@@ -4,8 +4,9 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'smartcall/soap/sms_client'
 require 'smartcall/soap/smartcall_error'
 
+VERSION = '0.0.3'
+
 module Smartcall
-  VERSION = '0.0.3'
 
   class API
     
