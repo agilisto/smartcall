@@ -29,9 +29,9 @@ module Smartcall
         end
       end
       
-      RESPONSE_HANDLER =    { 'Success' => true , 'InvalidSourceAddress' => Proc.new { SmsWSClient.invalid_source_address_error } ,
-                            'InvalidToken' => Proc.new { SmsWSClient.invalid_token_error } , 'Failed' => false ,
-                            'InvalidNumber' => Proc.new { SmsWSClient.invalid_number_error }  }
+      RESPONSE_HANDLER =    { 'Success' => true , 'InvalidSourceAddress' => Proc.new { SmsClient.invalid_source_address_error } ,
+                            'InvalidToken' => Proc.new { SmsClient.invalid_token_error } , 'Failed' => false ,
+                            'InvalidNumber' => Proc.new { SmsClient.invalid_number_error }  }
       
       def initialize(username, password, campaign_id, reference)
         @retry = true
