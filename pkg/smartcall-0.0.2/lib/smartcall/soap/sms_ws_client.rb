@@ -29,6 +29,7 @@ module Smartcall
       end
   
       @@debug_mode = false
+
       
       RESPONSE_HANDLER =    { 'Success' => true , 'InvalidSourceAddress' => Proc.new { SmsWSClient.invalid_source_address_error } ,
                             'InvalidToken' => Proc.new { SmsWSClient.invalid_token_error } , 'Failed' => false ,
