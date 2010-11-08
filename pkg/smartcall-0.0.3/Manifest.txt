@@ -6,10 +6,7 @@ Rakefile
 bin/smartcall
 config/website.yml.sample
 lib/smartcall.rb
-lib/smartcall/soap/default.rb
-lib/smartcall/soap/default_driver.rb
 lib/smartcall/soap/smartcall_error.rb
-lib/smartcall/soap/sms_ws_client.rb
 lib/smartcall/utility.rb
 lib/smartcall/utility/options.rb
 script/console
