@@ -1,4 +1,3 @@
-require 'net/http'
 require "savon"
 
 module Smartcall
@@ -68,7 +67,6 @@ module Smartcall
       protected
       def login
         response = @client.request(:login, namespace) do |soap|
-          debugger
           soap.body = {
             :username => @username, 
             :password => @password
