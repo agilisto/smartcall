@@ -4,7 +4,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'smartcall/soap/sms_client'
 require 'smartcall/soap/smartcall_error'
 
-VERSION = '0.0.4'
+VERSION = '0.0.5'
 
 module Smartcall
 
